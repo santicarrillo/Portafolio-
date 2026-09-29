@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Santiago Carrillo · Backend Java</title>
+  <meta name="description" content="Desarrollador Backend Java: Spring Boot, APIs REST, Spring Data JPA y PostgreSQL. Proyectos, stack y contacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="icon" href="assets/avatar.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<main class="wrap">
+
+<header class="hero">
+  <div class="hero-text">
+    <span class="label">Portfolio</span>
+    <h1>Santiago Carrillo</h1>
+    <p class="role">Desarrollador Backend Java</p>
+    <p class="pitch">Estudiante avanzado de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI, UNICEN), orientado al desarrollo backend con Java 17+ y Spring Boot. Diseño APIs RESTful con persistencia en PostgreSQL a través de Spring Data JPA, trabajo con DTOs, validaciones y Maven, y automatizo procesos e integraciones con n8n.</p>
+    <div class="meta">
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tandil, Buenos Aires, Argentina</span>
+      <span>Español nativo · Inglés B1–B2</span>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.linkedin.com/in/santiago-carrillo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/sariticarrillo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+      <a class="btn" href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <img class="avatar" src="assets/avatar.jpg" alt="Foto de Santiago Carrillo" width="152" height="152">
+</header>
+
+<pre class="status" aria-label="Resumen del perfil"><span class="ok">GET /santiago  200 OK</span>
+{
+  <span class="k">"rol"</span>: <span class="s">"Junior Backend Java Developer"</span>,
+  <span class="k">"foco"</span>: [
+    <span class="s">"Java 17+"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"APIs REST"</span>, <span class="s">"Spring Data JPA"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"n8n"</span>
+  ],
+  <span class="k">"estudios"</span>: <span class="s">"TUDAI · UNICEN"</span>,
+  <span class="k">"disponible"</span>: <span class="s">true</span>
+}</pre>
+
+<section id="proyectos">
+  <div class="sec-head">
+    <span class="label">Trabajo</span>
+    <h2>Proyectos</h2>
+    <p>Primero, mi trabajo backend en Java. Debajo, proyectos fullstack donde también construí la interfaz. Cada uno indica en qué estado está.</p>
+  </div>
+
+  <div class="projects">
+    <article class="project featured">
+      <div class="p-side">
+        <div class="route"><span class="method post">POST</span>/proyectos/java-backend-api</div>
+        <h3>API REST &amp; Microservicios Backend</h3>
+        <p class="kind">Backend API · Java 17 &amp; Spring Boot</p>
+        <span class="state dev">En desarrollo</span>
+        <span class="badge">Proyecto destacado</span>
+      </div>
+      <div class="p-body">
+        <p>API RESTful que estoy desarrollando con Java 17 y Spring Boot, enfocada en la gestión eficiente de datos relacionales y en un código ordenado y fácil de mantener.</p>
+        <ul>
+          <li>Diseño y desarrollo de endpoints RESTful estructurados.</li>
+          <li>Mapeo objeto-relacional y persistencia en PostgreSQL con Spring Data JPA e Hibernate.</li>
+          <li>Buenas prácticas: DTOs, validación de datos y arquitectura limpia.</li>
+        </ul>
+        <ul class="chips"><li>Java 17</li><li>Spring Boot</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Swagger</li><li>Maven</li></ul>
+        <div class="links">
+          <a href="https://github.com/sariticarrillo" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </div>
+    </article>
+    <div class="subhead"><span class="label">Proyectos complementarios · Fullstack</span></div>
+
+
+    <article class="project">
+      <div class="p-side">
+        <div class="route"><span class="method">GET</span>/proyectos/galeria-de-obras</div>
+        <h3>Galería de Obras</h3>
+        <p class="kind">Marketplace de arte · Fullstack</p>
+        <span class="state dev">En desarrollo</span>
+      </div>
+      <div class="p-body">
+        <p>Plataforma donde artistas publican y venden sus obras. Tiene galería pública, detalle de cada obra, proceso de compra y un panel propio para que cada artista gestione sus publicaciones y cobros.</p>
+        <ul>
+          <li>Tres perfiles (visitante, comprador y artista) con rutas protegidas por guards de autenticación y de rol.</li>
+          <li>Pagos integrados con Mercado Pago, imágenes alojadas en Cloudinary y datos y usuarios en Firebase.</li>
+          <li>Renderizado del lado del servidor con Angular SSR.</li>
+        </ul>
+        <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Angular SSR</li><li>Firebase</li><li>Mercado Pago</li><li>Cloudinary</li></ul>
+        <div class="links">
+          <a href="https://github.com/santicarrillo/Pagina-Obras" target="_blank" rel="noopener">Código ↗</a>
+          <a href="https://santicarrillo.github.io/Pagina-Obras/" target="_blank" rel="noopener">Ver demo ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="p-side">
+        <div class="route"><span class="method">GET</span>/proyectos/admin-seguros</div>
+        <h3>Admin Seguros</h3>
+        <p class="kind">Aplicación web · Fullstack</p>
+        <span class="state proto">Prototipo · pausado</span>
+      </div>
+      <div class="p-body">
+        <p>Prototipo de una herramienta para que un productor de seguros gestione su cartera de clientes: alta de usuarios, inicio de sesión, listado de clientes y ficha de detalle de cada uno.</p>
+        <ul>
+          <li>Frontend en React con Vite, organizado en páginas, componentes y servicios.</li>
+          <li>Backend independiente en Node.js con Express, separado en rutas, controladores y modelos.</li>
+        </ul>
+        <ul class="chips"><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>JavaScript</li></ul>
+        <div class="links">
+          <a href="https://github.com/santicarrillo/admin-seguros" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="p-side">
+        <div class="route"><span class="method">GET</span>/proyectos/precio-justo</div>
+        <h3>Precio Justo</h3>
+        <p class="kind">Landing page · Frontend</p>
+        <span class="state done">Terminado</span>
+      </div>
+      <div class="p-body">
+        <p>Página de venta para una planilla que ayuda a pequeños comercios a fijar precios cuando los costos suben todos los meses.</p>
+        <ul>
+          <li>Calculadora interactiva que combina costo, comisión, margen deseado e inflación para sugerir un precio.</li>
+          <li>JavaScript sin frameworks, organizado en modelo, vista y controlador, con validación y limpieza de los datos ingresados.</li>
+        </ul>
+        <ul class="chips"><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>MVC</li></ul>
+        <div class="links">
+          <a href="https://github.com/santicarrillo/lading-page-pole" target="_blank" rel="noopener">Código ↗</a>
+          <a href="https://santicarrillo.github.io/lading-page-pole/" target="_blank" rel="noopener">Ver demo ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="p-side">
+        <div class="route"><span class="method">GET</span>/proyectos/catalogo-videojuegos</div>
+        <h3>Catálogo de Videojuegos</h3>
+        <p class="kind">SPA · Frontend</p>
+        <span class="state done">Terminado</span>
+      </div>
+      <div class="p-body">
+        <p>Catálogo de juegos gratuitos que consume la API pública de FreeToGame, con una sección de favoritos.</p>
+        <ul>
+          <li>Estado de favoritos compartido entre componentes mediante un servicio con signals.</li>
+          <li>Ruteo entre catálogo y favoritos, tarjeta reutilizable, modal de detalle y grilla responsive.</li>
+        </ul>
+        <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Signals</li><li>HttpClient</li><li>SCSS</li></ul>
+        <div class="links">
+          <a href="https://github.com/santicarrillo/Page-VideoJuego-Angular" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="sec-head">
+    <h2>Stack técnico</h2>
+    <p>Las tecnologías con las que trabajo. Resaltadas, las de mi foco backend. Filtrá por área.</p>
+  </div>
+  <div class="tabs" role="group" aria-label="Filtrar tecnologías">
+    <button type="button" class="tab" aria-pressed="true" data-cat="todos">Todos</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="lenguajes">Lenguajes</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="backend">Backend</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="datos">Bases de datos</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="frontend">Frontend</button>
+    <button type="button" class="tab" aria-pressed="false" data-cat="herramientas">Herramientas</button>
+  </div>
+  <ul class="tiles" id="tiles">
+    <li class="tile core" data-cat="lenguajes"><span class="logo"><img src="assets/icons/java.svg" alt="" width="30" height="30"></span><span class="tname">Java<small>Java 17+</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/javascript.svg" alt="" width="30" height="30"></span><span class="tname">JavaScript<small>Lenguajes</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/typescript.svg" alt="" width="30" height="30"></span><span class="tname">TypeScript<small>Lenguajes</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/php.svg" alt="" width="30" height="30"></span><span class="tname">PHP<small>Lenguajes</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/sql.svg" alt="" width="30" height="30"></span><span class="tname">SQL<small>Lenguajes</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/html5.svg" alt="" width="30" height="30"></span><span class="tname">HTML5<small>Lenguajes</small></span></li>
+    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/css3.svg" alt="" width="30" height="30"></span><span class="tname">CSS3<small>Lenguajes</small></span></li>
+    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/spring-boot.svg" alt="" width="30" height="30"></span><span class="tname">Spring Boot<small>Foco principal</small></span></li>
+    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/hibernate-jpa.svg" alt="" width="30" height="30"></span><span class="tname">Hibernate / JPA<small>Foco principal</small></span></li>
+    <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/node-js.svg" alt="" width="30" height="30"></span><span class="tname">Node.js<small>Backend</small></span></li>
+    <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/express.svg" alt="" width="30" height="30"></span><span class="tname">Express<small>Backend</small></span></li>
+    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/n8n.svg" alt="" width="30" height="30"></span><span class="tname">n8n<small>Foco principal</small></span></li>
+    <li class="tile core" data-cat="datos"><span class="logo"><img src="assets/icons/postgresql.svg" alt="" width="30" height="30"></span><span class="tname">PostgreSQL<small>Foco principal</small></span></li>
+    <li class="tile" data-cat="datos"><span class="logo"><img src="assets/icons/mysql.svg" alt="" width="30" height="30"></span><span class="tname">MySQL<small>Bases de datos</small></span></li>
+    <li class="tile" data-cat="frontend"><span class="logo"><img src="assets/icons/angular.svg" alt="" width="30" height="30"></span><span class="tname">Angular<small>Frontend</small></span></li>
+    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/git.svg" alt="" width="30" height="30"></span><span class="tname">Git<small>Foco principal</small></span></li>
+    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/github.svg" alt="" width="30" height="30"></span><span class="tname">GitHub<small>Herramientas</small></span></li>
+    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/docker.svg" alt="" width="30" height="30"></span><span class="tname">Docker<small>Foco principal</small></span></li>
+    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/maven.svg" alt="" width="30" height="30"></span><span class="tname">Maven<small>Foco principal</small></span></li>
+    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/postman.svg" alt="" width="30" height="30"></span><span class="tname">Postman<small>Herramientas</small></span></li>
+  </ul>
+  <ul class="chips extra"><li>APIs RESTful</li><li>DTOs y validaciones</li><li>Clean Architecture</li><li>Webhooks</li><li>Modelado relacional y UML</li><li>Máquinas virtuales</li><li>Scrum</li><li>Kanban</li></ul>
+</section>
+
+<section id="formacion">
+  <div class="sec-head">
+    <span class="label">Formación</span>
+    <h2>Estudios e idiomas</h2>
+  </div>
+  <div class="edu">
+    <div><strong>Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (TUDAI)</strong><span>UNICEN · Tandil, Argentina</span></div>
+    <div><strong>Idiomas</strong><span>Español nativo · Inglés intermedio (B1–B2), en progreso</span></div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <span class="label">Contacto</span>
+  <h2>¿Buscás un desarrollador backend Java junior?</h2>
+  <p class="contact-text">Busco mi primera posición como Junior Backend Java Developer. Escribime por mail o por LinkedIn.</p>
+  <div class="mail">
+    <code id="email">santiago03carrillo@gmail.com</code>
+    <button class="btn" id="copy" type="button">Copiar mail</button>
+    <span class="toast" id="toast" role="status"></span>
+  </div>
+  <div class="actions">
+    <a class="btn primary" href="https://www.linkedin.com/in/santiago-carrillo" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/sariticarrillo" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+<footer>santiago carrillo · tandil, argentina</footer>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
