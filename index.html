@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Santiago Carrillo · Backend Java</title>
-  <meta name="description" content="Desarrollador Backend Java: Spring Boot, APIs REST, Spring Data JPA y PostgreSQL. Proyectos, stack y contacto.">
+  <title>Santiago Carrillo · Desarrollo de sistemas y aplicaciones web</title>
+  <meta name="description" content="Santiago Carrillo, desarrollador Backend Java en Tandil. Desarrollo sistemas de gestión, páginas web, aplicaciones web y automatizaciones a medida. Java, Spring Boot, APIs REST y PostgreSQL.">
+  <meta name="theme-color" content="#F2F4F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D121A" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -12,224 +14,494 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<a class="skip" href="#servicios">Saltar al contenido</a>
 <div class="progress" aria-hidden="true"></div>
-<main class="wrap">
+<div class="cursor-glow" aria-hidden="true"></div>
 
-<header class="hero">
-  <div class="hero-text">
-    <span class="label">Portfolio</span>
-    <h1>Santiago Carrillo</h1>
-    <p class="role">Desarrollador Backend Java</p>
-    <p class="pitch">Estudiante avanzado de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI, UNICEN), orientado al desarrollo backend con Java 17+ y Spring Boot. Diseño APIs RESTful con persistencia en PostgreSQL a través de Spring Data JPA, trabajo con DTOs, validaciones y Maven, y automatizo procesos e integraciones con n8n.</p>
-    <div class="meta">
-      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tandil, Buenos Aires, Argentina</span>
-      <span>Español nativo · Inglés B1–B2</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" href="https://www.linkedin.com/in/santiago-carrillo-2344292a5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
-      <a class="btn" href="https://github.com/santicarrillo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>GitHub</a>
-      <a class="btn" href="assets/cv/CV_Santiago_Carrillo_ES.pdf" download="CV_Santiago_Carrillo.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Descargar CV</a>
-      <a class="btn" href="#contacto">Contacto</a>
-    </div>
+<!-- 1. Navegación -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#inicio" aria-label="Santiago Carrillo, volver al inicio"><span class="brand-dot" aria-hidden="true"></span>santiago carrillo</a>
+    <nav class="nav-links" id="nav-links" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#stack">Stack</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn primary nav-cta magnet" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener">Hablemos</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú"><span></span><span></span><span></span></button>
   </div>
-  <img class="avatar" src="assets/avatar.jpg" alt="Foto de Santiago Carrillo" width="152" height="152">
 </header>
 
-<pre class="status" aria-label="Resumen del perfil"><span class="ok">GET /santiago  200 OK</span>
-{
+<!-- Mapa de niveles (pantallas grandes) -->
+<nav class="hud" aria-label="Mapa de niveles">
+  <span class="hud-line" aria-hidden="true"><span class="hud-fill" id="hud-fill"></span></span>
+  <a href="#servicios" data-hud="servicios"><span class="hud-dot">1</span><span class="hud-name">Servicios</span></a>
+  <a href="#proceso" data-hud="proceso"><span class="hud-dot">2</span><span class="hud-name">Cómo trabajo</span></a>
+  <a href="#proyectos" data-hud="proyectos"><span class="hud-dot">3</span><span class="hud-name">Proyectos</span></a>
+  <a href="#stack" data-hud="stack"><span class="hud-dot">4</span><span class="hud-name">Stack técnico</span></a>
+  <a href="#empresas" data-hud="empresas"><span class="hud-dot">5</span><span class="hud-name">Empresas</span></a>
+  <a href="#contacto" data-hud="contacto"><span class="hud-dot">6</span><span class="hud-name">Contacto</span></a>
+</nav>
+<div class="level-toast" id="level-toast" aria-hidden="true"><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></span><span class="lt-body"><span class="lt-kicker">Nivel desbloqueado</span><span class="lt-txt" id="level-toast-txt"></span></span></div>
+
+<main>
+
+<!-- 2. Hero -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true" data-parallax="0.3"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="kicker"><span class="method">GET</span>/santiago-carrillo <span class="ok">200 OK</span></p>
+      <h1>Desarrollo <span class="rotator" aria-hidden="true"><span class="word" id="word" data-words="landing pages|web apps|management systems|automations">landing pages</span></span><span class="sr-only">landing pages, web apps, management systems y automations</span> a medida</h1>
+      <p class="pitch">Soy Santiago, desarrollador en Tandil. Creo herramientas digitales para que tu negocio funcione más ordenado: fáciles de usar, rápidas y pensadas para lo que necesitás.</p>
+      <div class="actions">
+        <a class="btn primary big magnet" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20vi%20tu%20portafolio%20y%20quiero%20pedir%20un%20presupuesto%20para%20un%20proyecto." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Pedir presupuesto por WhatsApp</a>
+        <a class="btn big" href="#proyectos">Ver proyectos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></a>
+      </div>
+      <p class="meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tandil, Buenos Aires, Argentina</p>
+    </div>
+    <div class="avatar-wrap" data-parallax="-0.08">
+      <div class="ring" aria-hidden="true"></div>
+      <span class="float-chip c1" aria-hidden="true" data-parallax="0.18"><span class="method post">POST</span>/api/turnos <span class="ok">201</span></span>
+      <span class="float-chip c2" aria-hidden="true" data-parallax="-0.22">@RestController</span>
+      <span class="float-chip c3" aria-hidden="true" data-parallax="0.3"><span class="ok">✓</span> n8n workflow</span>
+      <img class="avatar" src="assets/avatar.jpg" alt="Foto de Santiago Carrillo" width="240" height="240">
+      <span class="avail"><span class="pulse-dot" aria-hidden="true"></span>Desarrollador Backend Java</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Servicios -->
+<section class="sec sheet" id="servicios">
+  <div class="sheet-glow" aria-hidden="true" data-parallax="0.25"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="level" data-level="1" data-name="Servicios"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 01</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method">GET</span><span class="scramble">/servicios</span></span>
+      <h2>¿En qué te puedo <span class="grad">ayudar</span>?</h2>
+      <p>No hace falta que sepas de programación. Contame qué necesitás y lo armamos juntos.</p>
+    </div>
+    <div class="services">
+      <article class="service glow tilt reveal">
+        <div class="s-top">
+          <span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span>
+          <span class="s-num" aria-hidden="true" data-parallax="-0.1">01</span>
+        </div>
+        <div class="s-title"><h3>Management systems</h3><span class="s-es">Sistemas de gestión</span></div>
+        <p>Un sistema hecho para tu negocio, para dejar atrás las planillas sueltas y los papeles.</p>
+        <ul class="checks">
+          <li>Clientes, turnos, stock y ventas en un solo lugar.</li>
+          <li>Acceso con usuario para vos y tu equipo.</li>
+          <li>Información siempre a mano, desde la compu o el celular.</li>
+        </ul>
+        <a class="btn s-cta" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20quiero%20consultarte%20por%20un%20sistema%20de%20gesti%C3%B3n%20para%20mi%20negocio%20(clientes%2C%20turnos%2C%20stock%20o%20ventas)." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Consultar<span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+      <article class="service glow tilt reveal">
+        <div class="s-top">
+          <span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M6 6.5h.01M9 6.5h.01"/><path d="M6 13h7M6 16h4"/></svg></span>
+          <span class="s-num" aria-hidden="true" data-parallax="-0.1">02</span>
+        </div>
+        <div class="s-title"><h3>Landing pages</h3><span class="s-es">Páginas web</span></div>
+        <p>Una página profesional para mostrar tu marca o negocio y que te encuentren fácil.</p>
+        <ul class="checks">
+          <li>Se ve bien en celular, tablet y computadora.</li>
+          <li>Botón directo a tu WhatsApp para que te consulten.</li>
+          <li>Diseño a medida de tu marca, sin plantillas genéricas.</li>
+        </ul>
+        <a class="btn s-cta" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20quiero%20consultarte%20por%20una%20landing%20page%20para%20mostrar%20mi%20marca%20o%20negocio." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Consultar<span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+      <article class="service glow tilt reveal">
+        <div class="s-top">
+          <span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></span>
+          <span class="s-num" aria-hidden="true" data-parallax="-0.1">03</span>
+        </div>
+        <div class="s-title"><h3>Web apps</h3><span class="s-es">Aplicaciones web</span></div>
+        <p>Plataformas más completas: tiendas online, paneles de administración y sitios con usuarios y pagos.</p>
+        <ul class="checks">
+          <li>Registro e inicio de sesión de usuarios.</li>
+          <li>Cobros online integrados, por ejemplo con Mercado Pago.</li>
+          <li>Se usa desde el navegador, también en el celular, sin instalar nada.</li>
+        </ul>
+        <a class="btn s-cta" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20quiero%20consultarte%20por%20una%20web%20app%20(tienda%20online%2C%20panel%20o%20plataforma%20con%20usuarios%20y%20pagos)." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Consultar<span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+      <article class="service glow tilt reveal">
+        <div class="s-top">
+          <span class="s-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M7.5 6H14a3 3 0 0 1 3 3v6.5"/><path d="M13 13l-2 3h3l-2 3"/></svg></span>
+          <span class="s-num" aria-hidden="true" data-parallax="-0.1">04</span>
+        </div>
+        <div class="s-title"><h3>Automations</h3><span class="s-es">Automatizaciones</span></div>
+        <p>Conecto las herramientas que ya usás para que las tareas repetitivas se hagan solas.</p>
+        <ul class="checks">
+          <li>Avisos y respuestas automáticas por mail o mensajes.</li>
+          <li>Datos que pasan solos entre formularios, planillas y sistemas.</li>
+          <li>Menos carga manual, menos errores y más tiempo para vos.</li>
+        </ul>
+        <a class="btn s-cta" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20quiero%20consultarte%20por%20automatizar%20tareas%20repetitivas%20de%20mi%20negocio." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Consultar<span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Cómo trabajo -->
+<section class="sec" id="proceso">
+  <div class="proc-bg" aria-hidden="true" data-parallax="0.3"></div>
+  <div class="proc-track"><div class="wrap proc-pin">
+    <div class="sec-head reveal">
+      <span class="level" data-level="2" data-name="Cómo trabajo"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 02</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method">GET</span><span class="scramble">/proceso</span></span>
+      <h2>Cómo <span class="grad">trabajo</span></h2>
+      <p>Un proceso simple y claro, para que sepas en todo momento en qué está tu proyecto.</p>
+    </div>
+    <div class="steps" id="steps">
+      <ol>
+        <li class="step"><span class="dot">1</span>
+          <div class="step-card glow tilt">
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span>
+            <h3>Charlamos tu idea</h3><p>Me contás qué necesitás por WhatsApp o mail. Sin compromiso y sin tecnicismos.</p>
+          </div></li>
+        <li class="step"><span class="dot">2</span>
+          <div class="step-card glow tilt">
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></span>
+            <h3>Nos reunimos</h3><p>Coordinamos una reunión para entender bien tu proyecto y definir juntos qué necesitás.</p>
+          </div></li>
+        <li class="step"><span class="dot">3</span>
+          <div class="step-card glow tilt">
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg></span>
+            <h3>Desarrollo con avances</h3><p>Vas viendo el progreso y opinando en el camino, para que el resultado sea lo que esperás.</p>
+          </div></li>
+        <li class="step"><span class="dot">4</span>
+          <div class="step-card glow tilt">
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.3-2 4-2 6 2 0 4.7-.5 6-2"/><path d="M9 15l-3-3a15 15 0 0 1 12-9 15 15 0 0 1-9 12z"/><circle cx="15" cy="9" r="1.5"/></svg></span>
+            <h3>Entrega y soporte</h3><p>Te entrego todo funcionando, te explico cómo usarlo y te acompaño después de la entrega.</p>
+          </div></li>
+      </ol>
+    </div>
+  </div></div>
+  <div class="wrap proc-after">
+    <div class="quote reveal">
+      <div class="quote-bg" aria-hidden="true" data-parallax="0.25"></div>
+      <div class="quote-text">
+        <span class="label"><span class="method post">POST</span><span class="scramble">/reunion</span></span>
+        <h3>¿Arrancamos por el paso 1?</h3>
+        <p>Escribime y coordinamos una reunión para charlar tu proyecto.</p>
+      </div>
+      <a class="btn big quote-btn magnet" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20para%20charlar%20sobre%20un%20proyecto." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Coordinar una reunión por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Proyectos -->
+<section class="sec" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="level" data-level="3" data-name="Proyectos"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 03</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method">GET</span><span class="scramble">/proyectos</span></span>
+      <h2>Proyectos <span class="grad">reales</span></h2>
+      <p>Primero, mi trabajo backend en Java. Debajo, proyectos fullstack donde también construí la interfaz. Cada uno indica en qué estado está.</p>
+    </div>
+
+    <div class="projects">
+      <article class="project featured glow tilt reveal">
+        <div class="p-bar">
+          <span class="route"><span class="method post">POST</span>/proyectos/java-backend-api</span>
+          <span class="state dev">En desarrollo</span>
+        </div>
+        <div class="p-content">
+          <div class="p-head">
+            <span class="badge">Proyecto destacado</span>
+            <h3>API REST &amp; Microservicios Backend</h3>
+            <p class="kind">Backend API · Java 17 &amp; Spring Boot</p>
+          </div>
+          <div class="p-body">
+            <p>API RESTful que estoy desarrollando con Java 17 y Spring Boot, enfocada en la gestión eficiente de datos relacionales y en un código ordenado y fácil de mantener.</p>
+            <ul>
+              <li>Diseño y desarrollo de endpoints RESTful estructurados.</li>
+              <li>Mapeo objeto-relacional y persistencia en PostgreSQL con Spring Data JPA e Hibernate.</li>
+              <li>Buenas prácticas: DTOs, validación de datos y arquitectura limpia.</li>
+            </ul>
+            <ul class="chips"><li>Java 17</li><li>Spring Boot</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Swagger</li><li>Maven</li></ul>
+            <div class="links">
+              <a class="link-btn" href="https://github.com/santicarrillo" target="_blank" rel="noopener">Código <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <p class="subhead label reveal">Proyectos complementarios · Fullstack</p>
+
+      <div class="p-grid">
+        <article class="project glow tilt reveal">
+          <div class="p-bar">
+            <span class="route"><span class="method">GET</span>/proyectos/galeria-de-obras</span>
+            <span class="state dev">En desarrollo</span>
+          </div>
+          <div class="p-content">
+            <div class="p-head">
+              <h3>Galería de Obras</h3>
+              <p class="kind">Marketplace de arte · Fullstack</p>
+            </div>
+            <div class="p-body">
+              <p>Plataforma donde artistas publican y venden sus obras. Tiene galería pública, detalle de cada obra, proceso de compra y un panel propio para que cada artista gestione sus publicaciones y cobros.</p>
+              <ul>
+                <li>Tres perfiles (visitante, comprador y artista) con rutas protegidas por guards de autenticación y de rol.</li>
+                <li>Pagos integrados con Mercado Pago, imágenes alojadas en Cloudinary y datos y usuarios en Firebase.</li>
+                <li>Renderizado del lado del servidor con Angular SSR.</li>
+              </ul>
+              <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Angular SSR</li><li>Firebase</li><li>Mercado Pago</li><li>Cloudinary</li></ul>
+              <div class="links">
+                <a class="link-btn" href="https://github.com/santicarrillo/Pagina-Obras" target="_blank" rel="noopener">Código <span aria-hidden="true">↗</span></a>
+                <a class="link-btn solid" href="https://santicarrillo.github.io/Pagina-Obras/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project glow tilt reveal">
+          <div class="p-bar">
+            <span class="route"><span class="method">GET</span>/proyectos/admin-seguros</span>
+            <span class="state proto">Prototipo · pausado</span>
+          </div>
+          <div class="p-content">
+            <div class="p-head">
+              <h3>Admin Seguros</h3>
+              <p class="kind">Aplicación web · Fullstack</p>
+            </div>
+            <div class="p-body">
+              <p>Prototipo de una herramienta para que un productor de seguros gestione su cartera de clientes: alta de usuarios, inicio de sesión, listado de clientes y ficha de detalle de cada uno.</p>
+              <ul>
+                <li>Frontend en React con Vite, organizado en páginas, componentes y servicios.</li>
+                <li>Backend independiente en Node.js con Express, separado en rutas, controladores y modelos.</li>
+              </ul>
+              <ul class="chips"><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>JavaScript</li></ul>
+              <div class="links">
+                <a class="link-btn" href="https://github.com/santicarrillo/admin-seguros" target="_blank" rel="noopener">Código <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project glow tilt reveal">
+          <div class="p-bar">
+            <span class="route"><span class="method">GET</span>/proyectos/precio-justo</span>
+            <span class="state done">Terminado</span>
+          </div>
+          <div class="p-content">
+            <div class="p-head">
+              <h3>Precio Justo</h3>
+              <p class="kind">Landing page · Frontend</p>
+            </div>
+            <div class="p-body">
+              <p>Página de venta para una planilla que ayuda a pequeños comercios a fijar precios cuando los costos suben todos los meses.</p>
+              <ul>
+                <li>Calculadora interactiva que combina costo, comisión, margen deseado e inflación para sugerir un precio.</li>
+                <li>JavaScript sin frameworks, organizado en modelo, vista y controlador, con validación y limpieza de los datos ingresados.</li>
+              </ul>
+              <ul class="chips"><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>MVC</li></ul>
+              <div class="links">
+                <a class="link-btn" href="https://github.com/santicarrillo/lading-page-pole" target="_blank" rel="noopener">Código <span aria-hidden="true">↗</span></a>
+                <a class="link-btn solid" href="https://santicarrillo.github.io/lading-page-pole/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project glow tilt reveal">
+          <div class="p-bar">
+            <span class="route"><span class="method">GET</span>/proyectos/catalogo-videojuegos</span>
+            <span class="state done">Terminado</span>
+          </div>
+          <div class="p-content">
+            <div class="p-head">
+              <h3>Catálogo de Videojuegos</h3>
+              <p class="kind">SPA · Frontend</p>
+            </div>
+            <div class="p-body">
+              <p>Catálogo de juegos gratuitos que consume la API pública de FreeToGame, con una sección de favoritos.</p>
+              <ul>
+                <li>Estado de favoritos compartido entre componentes mediante un servicio con signals.</li>
+                <li>Ruteo entre catálogo y favoritos, tarjeta reutilizable, modal de detalle y grilla responsive.</li>
+              </ul>
+              <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Signals</li><li>HttpClient</li><li>SCSS</li></ul>
+              <div class="links">
+                <a class="link-btn" href="https://github.com/santicarrillo/Page-VideoJuego-Angular" target="_blank" rel="noopener">Código <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Stack técnico -->
+<section class="sec" id="stack">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="level" data-level="4" data-name="Stack técnico"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 04</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method">GET</span><span class="scramble">/stack</span></span>
+      <h2>Stack técnico</h2>
+      <p>Las tecnologías con las que trabajo. Resaltadas, las de mi foco backend. Filtrá por área.</p>
+    </div>
+  </div>
+
+  <div class="marquee reveal" aria-label="Tecnologías que uso">
+    <div class="marquee-track">
+      <ul class="marquee-list">
+        <li><img src="assets/icons/java.svg" alt="" width="28" height="28">Java</li>
+        <li><img src="assets/icons/spring-boot.svg" alt="" width="28" height="28">Spring Boot</li>
+        <li><img src="assets/icons/hibernate-jpa.svg" alt="" width="28" height="28">Hibernate / JPA</li>
+        <li><img src="assets/icons/postgresql.svg" alt="" width="28" height="28">PostgreSQL</li>
+        <li><img src="assets/icons/n8n.svg" alt="" width="28" height="28">n8n</li>
+        <li><img src="assets/icons/docker.svg" alt="" width="28" height="28">Docker</li>
+        <li><img src="assets/icons/maven.svg" alt="" width="28" height="28">Maven</li>
+        <li><img src="assets/icons/git.svg" alt="" width="28" height="28">Git</li>
+        <li><img src="assets/icons/mysql.svg" alt="" width="28" height="28">MySQL</li>
+        <li><img src="assets/icons/node-js.svg" alt="" width="28" height="28">Node.js</li>
+        <li><img src="assets/icons/angular.svg" alt="" width="28" height="28">Angular</li>
+        <li><img src="assets/icons/typescript.svg" alt="" width="28" height="28">TypeScript</li>
+        <li><img src="assets/icons/javascript.svg" alt="" width="28" height="28">JavaScript</li>
+        <li><img src="assets/icons/postman.svg" alt="" width="28" height="28">Postman</li>
+      </ul>
+      <ul class="marquee-list" aria-hidden="true">
+        <li><img src="assets/icons/java.svg" alt="" width="28" height="28">Java</li>
+        <li><img src="assets/icons/spring-boot.svg" alt="" width="28" height="28">Spring Boot</li>
+        <li><img src="assets/icons/hibernate-jpa.svg" alt="" width="28" height="28">Hibernate / JPA</li>
+        <li><img src="assets/icons/postgresql.svg" alt="" width="28" height="28">PostgreSQL</li>
+        <li><img src="assets/icons/n8n.svg" alt="" width="28" height="28">n8n</li>
+        <li><img src="assets/icons/docker.svg" alt="" width="28" height="28">Docker</li>
+        <li><img src="assets/icons/maven.svg" alt="" width="28" height="28">Maven</li>
+        <li><img src="assets/icons/git.svg" alt="" width="28" height="28">Git</li>
+        <li><img src="assets/icons/mysql.svg" alt="" width="28" height="28">MySQL</li>
+        <li><img src="assets/icons/node-js.svg" alt="" width="28" height="28">Node.js</li>
+        <li><img src="assets/icons/angular.svg" alt="" width="28" height="28">Angular</li>
+        <li><img src="assets/icons/typescript.svg" alt="" width="28" height="28">TypeScript</li>
+        <li><img src="assets/icons/javascript.svg" alt="" width="28" height="28">JavaScript</li>
+        <li><img src="assets/icons/postman.svg" alt="" width="28" height="28">Postman</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="tabs reveal" role="group" aria-label="Filtrar tecnologías">
+      <button type="button" class="tab" aria-pressed="true" data-cat="todos">Todos</button>
+      <button type="button" class="tab" aria-pressed="false" data-cat="lenguajes">Lenguajes</button>
+      <button type="button" class="tab" aria-pressed="false" data-cat="backend">Backend</button>
+      <button type="button" class="tab" aria-pressed="false" data-cat="datos">Bases de datos</button>
+      <button type="button" class="tab" aria-pressed="false" data-cat="frontend">Frontend</button>
+      <button type="button" class="tab" aria-pressed="false" data-cat="herramientas">Herramientas</button>
+    </div>
+    <ul class="tiles" id="tiles">
+      <li class="tile core" data-cat="lenguajes"><span class="logo"><img src="assets/icons/java.svg" alt="" width="30" height="30"></span><span class="tname">Java<small>Java 17+</small></span></li>
+      <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/javascript.svg" alt="" width="30" height="30"></span><span class="tname">JavaScript<small>Lenguajes</small></span></li>
+      <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/typescript.svg" alt="" width="30" height="30"></span><span class="tname">TypeScript<small>Lenguajes</small></span></li>
+      <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/php.svg" alt="" width="30" height="30"></span><span class="tname">PHP<small>Lenguajes</small></span></li>
+      <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/sql.svg" alt="" width="30" height="30"></span><span class="tname">SQL<small>Lenguajes</small></span></li>
+      <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/spring-boot.svg" alt="" width="30" height="30"></span><span class="tname">Spring Boot<small>Foco principal</small></span></li>
+      <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/hibernate-jpa.svg" alt="" width="30" height="30"></span><span class="tname">Hibernate / JPA<small>Foco principal</small></span></li>
+      <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/node-js.svg" alt="" width="30" height="30"></span><span class="tname">Node.js<small>Backend</small></span></li>
+      <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/express.svg" alt="" width="30" height="30"></span><span class="tname">Express<small>Backend</small></span></li>
+      <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/n8n.svg" alt="" width="30" height="30"></span><span class="tname">n8n<small>Foco principal</small></span></li>
+      <li class="tile core" data-cat="datos"><span class="logo"><img src="assets/icons/postgresql.svg" alt="" width="30" height="30"></span><span class="tname">PostgreSQL<small>Foco principal</small></span></li>
+      <li class="tile" data-cat="datos"><span class="logo"><img src="assets/icons/mysql.svg" alt="" width="30" height="30"></span><span class="tname">MySQL<small>Bases de datos</small></span></li>
+      <li class="tile" data-cat="frontend"><span class="logo"><img src="assets/icons/angular.svg" alt="" width="30" height="30"></span><span class="tname">Angular<small>Frontend</small></span></li>
+      <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/git.svg" alt="" width="30" height="30"></span><span class="tname">Git<small>Foco principal</small></span></li>
+      <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/github.svg" alt="" width="30" height="30"></span><span class="tname">GitHub<small>Herramientas</small></span></li>
+      <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/docker.svg" alt="" width="30" height="30"></span><span class="tname">Docker<small>Foco principal</small></span></li>
+      <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/maven.svg" alt="" width="30" height="30"></span><span class="tname">Maven<small>Foco principal</small></span></li>
+      <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/postman.svg" alt="" width="30" height="30"></span><span class="tname">Postman<small>Herramientas</small></span></li>
+      <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/html5.svg" alt="" width="30" height="30"></span><span class="tname">HTML5<small>Herramientas</small></span></li>
+      <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/css3.svg" alt="" width="30" height="30"></span><span class="tname">CSS3<small>Herramientas</small></span></li>
+    </ul>
+    <ul class="chips extra reveal"><li>APIs RESTful</li><li>DTOs y validaciones</li><li>Clean Architecture</li><li>Webhooks</li><li>Modelado relacional y UML</li><li>Máquinas virtuales</li><li>Scrum</li><li>Kanban</li></ul>
+  </div>
+</section>
+
+<!-- 7. Para empresas / reclutadores -->
+<section class="sec" id="empresas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="level" data-level="5" data-name="Empresas"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 05</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method">GET</span><span class="scramble">/empresas</span></span>
+      <h2>Para empresas y reclutadores</h2>
+      <p>Busco mi primera posición como Junior Backend Java Developer.</p>
+    </div>
+    <div class="recruit">
+      <div class="recruit-text reveal">
+        <p class="pitch-long">Estudiante avanzado de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI, UNICEN), orientado al desarrollo backend con Java 17+ y Spring Boot. Diseño APIs RESTful con persistencia en PostgreSQL a través de Spring Data JPA, trabajo con DTOs, validaciones y Maven, y automatizo procesos e integraciones con n8n.</p>
+        <dl class="edu">
+          <div><dt>Estudios</dt><dd><strong>Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (TUDAI)</strong>UNICEN · Tandil, Argentina · Estudiante avanzado</dd></div>
+          <div><dt>Idiomas</dt><dd><strong>Español nativo</strong>Inglés intermedio (B1–B2), en progreso</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn primary" href="assets/cv/CV_Santiago_Carrillo_ES.pdf" download="CV_Santiago_Carrillo_ES.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Descargar CV (ES)</a>
+          <a class="btn" href="assets/cv/CV_Santiago_Carrillo_EN.pdf" download="CV_Santiago_Carrillo_EN.pdf" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span lang="en">CV in English</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/santiago-carrillo-2344292a5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/santicarrillo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
+        </div>
+      </div>
+      <pre class="status reveal" aria-label="Resumen del perfil en formato JSON"><span class="req"><span class="method">GET</span> /santiago  <span class="ok">200 OK</span></span>{
+  <span class="k">"nombre"</span>: <span class="s">"Santiago Carrillo"</span>,
   <span class="k">"rol"</span>: <span class="s">"Junior Backend Java Developer"</span>,
   <span class="k">"foco"</span>: [
-    <span class="s">"Java 17+"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"APIs REST"</span>, <span class="s">"Spring Data JPA"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"n8n"</span>
+    <span class="s">"Java 17+"</span>, <span class="s">"Spring Boot"</span>,
+    <span class="s">"APIs REST"</span>, <span class="s">"Spring Data JPA"</span>,
+    <span class="s">"PostgreSQL"</span>, <span class="s">"n8n"</span>
   ],
   <span class="k">"estudios"</span>: <span class="s">"TUDAI · UNICEN"</span>,
-  <span class="k">"disponible"</span>: <span class="s">true</span>
-}</pre>
-
-<section id="proyectos">
-  <div class="sec-head">
-    <span class="label">Trabajo</span>
-    <h2>Proyectos</h2>
-    <p>Primero, mi trabajo backend en Java. Debajo, proyectos fullstack donde también construí la interfaz. Cada uno indica en qué estado está.</p>
-  </div>
-
-  <div class="projects">
-    <article class="project featured">
-      <div class="p-side">
-        <div class="route"><span class="method post">POST</span>/proyectos/java-backend-api</div>
-        <h3>API REST &amp; Microservicios Backend</h3>
-        <p class="kind">Backend API · Java 17 &amp; Spring Boot</p>
-        <span class="state dev">En desarrollo</span>
-        <span class="badge">Proyecto destacado</span>
-      </div>
-      <div class="p-body">
-        <p>API RESTful que estoy desarrollando con Java 17 y Spring Boot, enfocada en la gestión eficiente de datos relacionales y en un código ordenado y fácil de mantener.</p>
-        <ul>
-          <li>Diseño y desarrollo de endpoints RESTful estructurados.</li>
-          <li>Mapeo objeto-relacional y persistencia en PostgreSQL con Spring Data JPA e Hibernate.</li>
-          <li>Buenas prácticas: DTOs, validación de datos y arquitectura limpia.</li>
-        </ul>
-        <ul class="chips"><li>Java 17</li><li>Spring Boot</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Swagger</li><li>Maven</li></ul>
-        <div class="links">
-          <a href="https://github.com/santicarrillo" target="_blank" rel="noopener">Código ↗</a>
-        </div>
-      </div>
-    </article>
-    <div class="subhead"><span class="label">Proyectos complementarios · Fullstack</span></div>
-
-
-    <article class="project">
-      <div class="p-side">
-        <div class="route"><span class="method">GET</span>/proyectos/galeria-de-obras</div>
-        <h3>Galería de Obras</h3>
-        <p class="kind">Marketplace de arte · Fullstack</p>
-        <span class="state dev">En desarrollo</span>
-      </div>
-      <div class="p-body">
-        <p>Plataforma donde artistas publican y venden sus obras. Tiene galería pública, detalle de cada obra, proceso de compra y un panel propio para que cada artista gestione sus publicaciones y cobros.</p>
-        <ul>
-          <li>Tres perfiles (visitante, comprador y artista) con rutas protegidas por guards de autenticación y de rol.</li>
-          <li>Pagos integrados con Mercado Pago, imágenes alojadas en Cloudinary y datos y usuarios en Firebase.</li>
-          <li>Renderizado del lado del servidor con Angular SSR.</li>
-        </ul>
-        <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Angular SSR</li><li>Firebase</li><li>Mercado Pago</li><li>Cloudinary</li></ul>
-        <div class="links">
-          <a href="https://github.com/santicarrillo/Pagina-Obras" target="_blank" rel="noopener">Código ↗</a>
-          <a href="https://santicarrillo.github.io/Pagina-Obras/" target="_blank" rel="noopener">Ver demo ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="p-side">
-        <div class="route"><span class="method">GET</span>/proyectos/admin-seguros</div>
-        <h3>Admin Seguros</h3>
-        <p class="kind">Aplicación web · Fullstack</p>
-        <span class="state proto">Prototipo · pausado</span>
-      </div>
-      <div class="p-body">
-        <p>Prototipo de una herramienta para que un productor de seguros gestione su cartera de clientes: alta de usuarios, inicio de sesión, listado de clientes y ficha de detalle de cada uno.</p>
-        <ul>
-          <li>Frontend en React con Vite, organizado en páginas, componentes y servicios.</li>
-          <li>Backend independiente en Node.js con Express, separado en rutas, controladores y modelos.</li>
-        </ul>
-        <ul class="chips"><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>JavaScript</li></ul>
-        <div class="links">
-          <a href="https://github.com/santicarrillo/admin-seguros" target="_blank" rel="noopener">Código ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="p-side">
-        <div class="route"><span class="method">GET</span>/proyectos/precio-justo</div>
-        <h3>Precio Justo</h3>
-        <p class="kind">Landing page · Frontend</p>
-        <span class="state done">Terminado</span>
-      </div>
-      <div class="p-body">
-        <p>Página de venta para una planilla que ayuda a pequeños comercios a fijar precios cuando los costos suben todos los meses.</p>
-        <ul>
-          <li>Calculadora interactiva que combina costo, comisión, margen deseado e inflación para sugerir un precio.</li>
-          <li>JavaScript sin frameworks, organizado en modelo, vista y controlador, con validación y limpieza de los datos ingresados.</li>
-        </ul>
-        <ul class="chips"><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>MVC</li></ul>
-        <div class="links">
-          <a href="https://github.com/santicarrillo/lading-page-pole" target="_blank" rel="noopener">Código ↗</a>
-          <a href="https://santicarrillo.github.io/lading-page-pole/" target="_blank" rel="noopener">Ver demo ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="p-side">
-        <div class="route"><span class="method">GET</span>/proyectos/catalogo-videojuegos</div>
-        <h3>Catálogo de Videojuegos</h3>
-        <p class="kind">SPA · Frontend</p>
-        <span class="state done">Terminado</span>
-      </div>
-      <div class="p-body">
-        <p>Catálogo de juegos gratuitos que consume la API pública de FreeToGame, con una sección de favoritos.</p>
-        <ul>
-          <li>Estado de favoritos compartido entre componentes mediante un servicio con signals.</li>
-          <li>Ruteo entre catálogo y favoritos, tarjeta reutilizable, modal de detalle y grilla responsive.</li>
-        </ul>
-        <ul class="chips"><li>Angular</li><li>TypeScript</li><li>Signals</li><li>HttpClient</li><li>SCSS</li></ul>
-        <div class="links">
-          <a href="https://github.com/santicarrillo/Page-VideoJuego-Angular" target="_blank" rel="noopener">Código ↗</a>
-        </div>
-      </div>
-    </article>
+  <span class="k">"ubicacion"</span>: <span class="s">"Tandil, Argentina"</span>,
+  <span class="k">"disponible"</span>: <span class="b">true</span>
+}<span class="caret" aria-hidden="true"></span></pre>
+    </div>
   </div>
 </section>
 
-<section id="stack">
-  <div class="sec-head">
-    <h2>Stack técnico</h2>
-    <p>Las tecnologías con las que trabajo. Resaltadas, las de mi foco backend. Filtrá por área.</p>
-  </div>
-  <div class="tabs" role="group" aria-label="Filtrar tecnologías">
-    <button type="button" class="tab" aria-pressed="true" data-cat="todos">Todos</button>
-    <button type="button" class="tab" aria-pressed="false" data-cat="lenguajes">Lenguajes</button>
-    <button type="button" class="tab" aria-pressed="false" data-cat="backend">Backend</button>
-    <button type="button" class="tab" aria-pressed="false" data-cat="datos">Bases de datos</button>
-    <button type="button" class="tab" aria-pressed="false" data-cat="frontend">Frontend</button>
-    <button type="button" class="tab" aria-pressed="false" data-cat="herramientas">Herramientas</button>
-  </div>
-  <ul class="tiles" id="tiles">
-    <li class="tile core" data-cat="lenguajes"><span class="logo"><img src="assets/icons/java.svg" alt="" width="30" height="30"></span><span class="tname">Java<small>Java 17+</small></span></li>
-    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/javascript.svg" alt="" width="30" height="30"></span><span class="tname">JavaScript<small>Lenguajes</small></span></li>
-    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/typescript.svg" alt="" width="30" height="30"></span><span class="tname">TypeScript<small>Lenguajes</small></span></li>
-    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/php.svg" alt="" width="30" height="30"></span><span class="tname">PHP<small>Lenguajes</small></span></li>
-    <li class="tile" data-cat="lenguajes"><span class="logo"><img src="assets/icons/sql.svg" alt="" width="30" height="30"></span><span class="tname">SQL<small>Lenguajes</small></span></li>
-    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/spring-boot.svg" alt="" width="30" height="30"></span><span class="tname">Spring Boot<small>Foco principal</small></span></li>
-    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/hibernate-jpa.svg" alt="" width="30" height="30"></span><span class="tname">Hibernate / JPA<small>Foco principal</small></span></li>
-    <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/node-js.svg" alt="" width="30" height="30"></span><span class="tname">Node.js<small>Backend</small></span></li>
-    <li class="tile" data-cat="backend"><span class="logo"><img src="assets/icons/express.svg" alt="" width="30" height="30"></span><span class="tname">Express<small>Backend</small></span></li>
-    <li class="tile core" data-cat="backend"><span class="logo"><img src="assets/icons/n8n.svg" alt="" width="30" height="30"></span><span class="tname">n8n<small>Foco principal</small></span></li>
-    <li class="tile core" data-cat="datos"><span class="logo"><img src="assets/icons/postgresql.svg" alt="" width="30" height="30"></span><span class="tname">PostgreSQL<small>Foco principal</small></span></li>
-    <li class="tile" data-cat="datos"><span class="logo"><img src="assets/icons/mysql.svg" alt="" width="30" height="30"></span><span class="tname">MySQL<small>Bases de datos</small></span></li>
-    <li class="tile" data-cat="frontend"><span class="logo"><img src="assets/icons/angular.svg" alt="" width="30" height="30"></span><span class="tname">Angular<small>Frontend</small></span></li>
-    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/git.svg" alt="" width="30" height="30"></span><span class="tname">Git<small>Foco principal</small></span></li>
-    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/github.svg" alt="" width="30" height="30"></span><span class="tname">GitHub<small>Herramientas</small></span></li>
-    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/docker.svg" alt="" width="30" height="30"></span><span class="tname">Docker<small>Foco principal</small></span></li>
-    <li class="tile core" data-cat="herramientas"><span class="logo"><img src="assets/icons/maven.svg" alt="" width="30" height="30"></span><span class="tname">Maven<small>Foco principal</small></span></li>
-    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/postman.svg" alt="" width="30" height="30"></span><span class="tname">Postman<small>Herramientas</small></span></li>
-    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/html5.svg" alt="" width="30" height="30"></span><span class="tname">HTML5<small>Herramientas</small></span></li>
-    <li class="tile" data-cat="herramientas"><span class="logo"><img src="assets/icons/css3.svg" alt="" width="30" height="30"></span><span class="tname">CSS3<small>Herramientas</small></span></li>
-  </ul>
-  <ul class="chips extra"><li>APIs RESTful</li><li>DTOs y validaciones</li><li>Clean Architecture</li><li>Webhooks</li><li>Modelado relacional y UML</li><li>Máquinas virtuales</li><li>Scrum</li><li>Kanban</li></ul>
-</section>
-
-<section id="formacion">
-  <div class="sec-head">
-    <span class="label">Formación</span>
-    <h2>Estudios e idiomas</h2>
-  </div>
-  <div class="edu">
-    <div><strong>Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (TUDAI)</strong><span>UNICEN · Tandil, Argentina</span></div>
-    <div><strong>Idiomas</strong><span>Español nativo · Inglés intermedio (B1–B2), en progreso</span></div>
+<!-- 8. Contacto -->
+<section class="sec" id="contacto">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="contact-bg" aria-hidden="true" data-parallax="0.2"></div>
+      <span class="level" data-level="6" data-name="Contacto"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 06</span><span class="lv-check" aria-hidden="true">✓</span></span>
+      <span class="label"><span class="method post">POST</span><span class="scramble">/contacto</span></span>
+      <h2>¿Tenés una idea? <span class="grad">Hablemos.</span></h2>
+      <p class="contact-text">Escribime por WhatsApp y contame qué necesitás. Te respondo personalmente.</p>
+      <div class="actions">
+        <a class="btn primary big magnet" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20mi%20proyecto." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Escribime por WhatsApp</a>
+        <a class="btn big" href="https://www.linkedin.com/in/santiago-carrillo-2344292a5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+      </div>
+      <div class="mail">
+        <a class="mail-addr" id="email" href="mailto:santiago03carrillo@gmail.com">santiago03carrillo@gmail.com</a>
+        <button class="btn" id="copy" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copiar mail</button>
+        <span class="toast" id="toast" role="status"></span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="contacto" class="contact">
-  <span class="label">Contacto</span>
-  <h2>¿Buscás un desarrollador backend Java junior?</h2>
-  <p class="contact-text">Busco mi primera posición como Junior Backend Java Developer. Escribime por mail o por LinkedIn, o descargá mi CV.</p>
-  <div class="mail">
-    <code id="email">santiago03carrillo@gmail.com</code>
-    <button class="btn" id="copy" type="button">Copiar mail</button>
-    <span class="toast" id="toast" role="status"></span>
-  </div>
-  <div class="actions">
-    <a class="btn primary" href="https://www.linkedin.com/in/santiago-carrillo-2344292a5" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="btn" href="https://github.com/santicarrillo" target="_blank" rel="noopener">GitHub ↗</a>
-    <a class="btn" href="assets/cv/CV_Santiago_Carrillo_ES.pdf" download="CV_Santiago_Carrillo.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>CV en español</a>
-    <a class="btn" href="assets/cv/CV_Santiago_Carrillo_EN.pdf" download="CV_Santiago_Carrillo_EN.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>CV in English</a>
-  </div>
-</section>
-
-<footer>santiago carrillo · tandil, argentina</footer>
 </main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>santiago carrillo · tandil, argentina</span>
+    <span class="footer-links">
+      <a href="https://github.com/santicarrillo" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/santiago-carrillo-2344292a5" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:santiago03carrillo@gmail.com">Mail</a>
+    </span>
+  </div>
+</footer>
+
+<!-- 9. Botón flotante de WhatsApp -->
+<a class="wa-float" href="https://wa.me/5492494660680?text=Hola%20Santiago%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener" aria-label="Escribime por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></symbol>
+</svg>
 
 <script src="js/main.js"></script>
 </body>
