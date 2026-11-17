@@ -99,6 +99,11 @@ p{margin:0}
   html.js .nav-links a[aria-current="true"]::after{transform:scaleY(1)}
 }
 @media (max-width:380px){.brand{font-size:.95rem}.nav-cta{padding:9px 12px}}
+@media (max-width:767px){
+  .nav-cta{display:none}
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  .footer{padding-bottom:28px}
+}
 
 /* ---------- 2. Hero ---------- */
 .hero{position:relative;overflow:hidden;overflow:clip;padding-block:clamp(120px,15vw,168px) clamp(64px,9vw,112px)}
@@ -243,11 +248,13 @@ h2{font-size:clamp(1.85rem,4vw,2.7rem);font-weight:700;letter-spacing:-.025em}
   .step:not(:last-child)::after{background:linear-gradient(180deg,var(--accent),var(--method));transform-origin:top;transform:scaleY(var(--s))}
 }
 
-.proc-pin,.proc-after{display:grid;gap:clamp(28px,4vw,44px)}
-.proc-after{margin-top:clamp(28px,4vw,44px)}
-@media (prefers-reduced-motion:no-preference) and (min-width:1000px) and (min-height:760px){
-  html.io-line .proc-track{height:240vh}
-  html.io-line .proc-pin{position:sticky;top:var(--nav-h);min-height:calc(100vh - var(--nav-h));align-content:center}
+#proceso{padding-block:clamp(16px,2.5vw,28px) clamp(12px,2vw,20px)}
+.sheet{padding-bottom:clamp(40px,5vw,64px)}
+#proyectos{padding-top:clamp(32px,4vw,48px)}
+.proc-pin{display:grid;gap:clamp(24px,3vw,36px)}
+@media (prefers-reduced-motion:no-preference) and (min-width:1000px) and (min-height:800px){
+  html.io-line .proc-track{height:170vh}
+  html.io-line .proc-pin{position:sticky;top:calc(var(--nav-h) + 16px)}
 }
 
 /* Banner grande de presupuesto */
@@ -275,6 +282,7 @@ h2{font-size:clamp(1.85rem,4vw,2.7rem);font-weight:700;letter-spacing:-.025em}
 .p-head{display:grid;gap:8px;align-content:start}
 .project h3{font-size:1.4rem;font-weight:700;letter-spacing:-.01em}
 .kind{font-size:.9rem;color:var(--muted)}
+.p-plain{font-size:1.02rem;line-height:1.5;color:var(--ink);max-width:40rem}
 .p-body{display:grid;gap:14px;min-width:0}
 .p-body > p{max-width:42rem}
 .p-body ul:not(.chips){margin:0;padding-left:1.1rem;display:grid;gap:6px;color:var(--muted);max-width:42rem}
@@ -513,10 +521,10 @@ h2{font-size:clamp(1.85rem,4vw,2.7rem);font-weight:700;letter-spacing:-.025em}
     .step:nth-child(4) .dot::before{animation-range:cover 50% cover 55%}
     .step:nth-child(4) .dot{animation-range:cover 54% cover 56.5%}
     .step:nth-child(4) .step-card{animation-range:cover 54% cover 56.5%,entry 30% entry 90%,cover 50% cover 56.5%}
-    @media (min-width:1000px) and (min-height:760px){
+    @media (min-width:1000px) and (min-height:800px){
       .steps{view-timeline-name:none}
-      .proc-track{view-timeline-name:--steps;view-timeline-axis:block;height:240vh}
-      .proc-pin{position:sticky;top:var(--nav-h);min-height:calc(100vh - var(--nav-h));align-content:center}
+      .proc-track{view-timeline-name:--steps;view-timeline-axis:block;height:170vh}
+      .proc-pin{position:sticky;top:calc(var(--nav-h) + 16px)}
       .step:nth-child(1) .dot::before{animation-range:contain 3% contain 13%}
       .step:nth-child(1) .dot{animation-range:contain 12% contain 15%}
       .step:nth-child(1) .step-card{animation-range:contain 12% contain 15%,entry 0% entry 60%,contain 3% contain 15%}
