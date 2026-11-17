@@ -35,18 +35,6 @@
   </div>
 </header>
 
-<!-- Mapa de niveles (pantallas grandes) -->
-<nav class="hud" aria-label="Mapa de niveles">
-  <span class="hud-line" aria-hidden="true"><span class="hud-fill" id="hud-fill"></span></span>
-  <a href="#servicios" data-hud="servicios"><span class="hud-dot">1</span><span class="hud-name">Servicios</span></a>
-  <a href="#proceso" data-hud="proceso"><span class="hud-dot">2</span><span class="hud-name">Cómo trabajo</span></a>
-  <a href="#proyectos" data-hud="proyectos"><span class="hud-dot">3</span><span class="hud-name">Proyectos</span></a>
-  <a href="#stack" data-hud="stack"><span class="hud-dot">4</span><span class="hud-name">Stack técnico</span></a>
-  <a href="#empresas" data-hud="empresas"><span class="hud-dot">5</span><span class="hud-name">Empresas</span></a>
-  <a href="#contacto" data-hud="contacto"><span class="hud-dot">6</span><span class="hud-name">Contacto</span></a>
-</nav>
-<div class="level-toast" id="level-toast" aria-hidden="true"><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></span><span class="lt-body"><span class="lt-kicker">Nivel desbloqueado</span><span class="lt-txt" id="level-toast-txt"></span></span></div>
-
 <main>
 
 <!-- 2. Hero -->
@@ -69,7 +57,7 @@
       <span class="float-chip c2" aria-hidden="true" data-parallax="-0.22">@RestController</span>
       <span class="float-chip c3" aria-hidden="true" data-parallax="0.3"><span class="ok">✓</span> n8n workflow</span>
       <img class="avatar" src="assets/avatar.jpg" alt="Foto de Santiago Carrillo" width="240" height="240">
-      <span class="avail"><span class="pulse-dot" aria-hidden="true"></span>Desarrollador Backend Java</span>
+      <span class="avail"><span class="pulse-dot" aria-hidden="true"></span>Desarrollador Backend</span>
     </div>
   </div>
 </section>
@@ -79,7 +67,6 @@
   <div class="sheet-glow" aria-hidden="true" data-parallax="0.25"></div>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="level" data-level="1" data-name="Servicios"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 01</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method">GET</span><span class="scramble">/servicios</span></span>
       <h2>¿En qué te puedo <span class="grad">ayudar</span>?</h2>
       <p>No hace falta que sepas de programación. Contame qué necesitás y lo armamos juntos.</p>
@@ -150,7 +137,6 @@
   <div class="proc-bg" aria-hidden="true" data-parallax="0.3"></div>
   <div class="proc-track"><div class="wrap proc-pin">
     <div class="sec-head reveal">
-      <span class="level" data-level="2" data-name="Cómo trabajo"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 02</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method">GET</span><span class="scramble">/proceso</span></span>
       <h2>Cómo <span class="grad">trabajo</span></h2>
       <p>Un proceso simple y claro, para que sepas en todo momento en qué está tu proyecto.</p>
@@ -197,7 +183,6 @@
 <section class="sec" id="proyectos">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="level" data-level="3" data-name="Proyectos"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 03</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method">GET</span><span class="scramble">/proyectos</span></span>
       <h2>Proyectos <span class="grad">reales</span></h2>
       <p>Primero, mi trabajo backend en Java. Debajo, proyectos fullstack donde también construí la interfaz. Cada uno indica en qué estado está.</p>
@@ -340,7 +325,6 @@
 <section class="sec" id="stack">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="level" data-level="4" data-name="Stack técnico"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 04</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method">GET</span><span class="scramble">/stack</span></span>
       <h2>Stack técnico</h2>
       <p>Las tecnologías con las que trabajo. Resaltadas, las de mi foco backend. Filtrá por área.</p>
@@ -423,7 +407,6 @@
 <section class="sec" id="empresas">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="level" data-level="5" data-name="Empresas"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 05</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method">GET</span><span class="scramble">/empresas</span></span>
       <h2>Para empresas y reclutadores</h2>
       <p>Busco mi primera posición como Junior Backend Java Developer.</p>
@@ -463,7 +446,6 @@
   <div class="wrap">
     <div class="contact reveal">
       <div class="contact-bg" aria-hidden="true" data-parallax="0.2"></div>
-      <span class="level" data-level="6" data-name="Contacto"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path class="shackle" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="lv-txt">Nivel 06</span><span class="lv-check" aria-hidden="true">✓</span></span>
       <span class="label"><span class="method post">POST</span><span class="scramble">/contacto</span></span>
       <h2>¿Tenés una idea? <span class="grad">Hablemos.</span></h2>
       <p class="contact-text">Escribime por WhatsApp y contame qué necesitás. Te respondo personalmente.</p>

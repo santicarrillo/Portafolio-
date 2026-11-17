@@ -160,40 +160,6 @@ h2{font-size:clamp(1.85rem,4vw,2.7rem);font-weight:700;letter-spacing:-.025em}
 .sec-head p{color:var(--muted);font-size:1.05rem}
 #proceso,#empresas{background:linear-gradient(180deg,transparent,var(--accent-soft) 50%,transparent)}
 
-/* ---------- Niveles tipo videojuego ---------- */
-.level{position:relative;overflow:hidden;justify-self:start;display:inline-flex;align-items:center;gap:8px;font:600 .74rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
-  padding:7px 13px 7px 10px;border-radius:999px;border:1px solid transparent;color:#fff;background:linear-gradient(90deg,var(--accent),var(--method));box-shadow:0 10px 24px -12px var(--accent)}
-.level .lock{width:16px;height:16px;flex:none;overflow:visible}
-.level .shackle{transform-origin:16px 11px;transform:translateY(-2px) rotate(-30deg)}
-.lv-check{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.25);font-size:.62rem}
-.level::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);pointer-events:none}
-html.levels .level:not(.unlocked){color:var(--muted);background:var(--surface);border:1px dashed var(--line);box-shadow:none}
-html.levels .level:not(.unlocked) .shackle{transform:none}
-html.levels .level:not(.unlocked) .lv-check{opacity:0;scale:0}
-
-.hud{display:none}
-@media (min-width:1320px){
-  html.js .hud{display:flex;flex-direction:column;gap:16px;position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:40}
-}
-.hud a{position:relative;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;text-decoration:none}
-.hud-dot{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 .75rem var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--line)}
-.hud-name{position:absolute;right:42px;white-space:nowrap;font:600 .8rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:5px 10px;border-radius:8px;opacity:0;pointer-events:none;box-shadow:0 10px 24px -16px var(--shadow)}
-.hud a:hover .hud-name,.hud a:focus-visible .hud-name{opacity:1}
-.hud a.unlocked .hud-dot{color:var(--surface);background:var(--accent);border-color:var(--accent)}
-.hud a.current .hud-dot{scale:1.25;box-shadow:0 0 0 5px var(--accent-soft),0 8px 20px -6px var(--accent)}
-.hud-line{position:absolute;right:14px;top:15px;bottom:15px;width:2px;background:var(--line);border-radius:2px}
-.hud-fill{position:absolute;inset:0;background:linear-gradient(180deg,var(--accent),var(--method));transform-origin:top;transform:scaleY(var(--hud,0))}
-
-.level-toast{position:fixed;left:50%;top:calc(var(--nav-h) + 12px);z-index:46;transform:translateX(-50%);display:flex;align-items:center;gap:12px;
-  width:max-content;max-width:calc(100vw - 32px);padding:10px 16px 10px 10px;border-radius:14px;background:#0B1220;color:#EEF2F8;border:1px solid #26334A;box-shadow:0 20px 40px -18px rgba(0,0,0,.6);
-  opacity:0;visibility:hidden;translate:0 -18px;pointer-events:none}
-.level-toast.show{opacity:1;visibility:visible;translate:0 0}
-.lt-icon{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#0B1220;background:linear-gradient(135deg,#8FB0F5,#E9B566)}
-.lt-icon svg{width:20px;height:20px}
-.lt-body{display:grid;gap:2px;min-width:0}
-.lt-kicker{font:500 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#E9B566}
-.lt-txt{font:700 .95rem var(--display);overflow-wrap:anywhere}
-
 /* ---------- Brillo que sigue al cursor (tarjetas) ---------- */
 .glow{position:relative;isolation:isolate}
 .glow::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;opacity:0;
@@ -477,18 +443,6 @@ html.levels .level:not(.unlocked) .lv-check{opacity:0;scale:0}
   .step-card:hover .step-icon{transform:rotate(-8deg) scale(1.12)}
   .step:not(:last-child)::after{animation:gradShift 3s linear infinite}
 
-  /* Niveles: el candado se abre, brillo y aparición del aviso */
-  .level{transition:background-color .4s ease,color .4s ease,border-color .4s ease,box-shadow .4s ease}
-  .level .shackle{transition:transform .6s cubic-bezier(.3,1.6,.5,1) .15s}
-  .lv-check{transition:opacity .3s ease .45s,scale .45s cubic-bezier(.3,1.6,.5,1) .45s}
-  .level.unlocked::after{animation:shine 1.1s ease .35s}
-  .level.unlocked{animation:levelPop .6s cubic-bezier(.3,1.6,.5,1)}
-  .hud-dot{transition:background-color .4s ease,color .4s ease,border-color .4s ease,scale .35s var(--ease),box-shadow .35s ease}
-  .hud-name{transition:opacity .2s ease}
-  .hud-fill{transition:transform .8s var(--ease)}
-  .level-toast{transition:opacity .35s ease,translate .45s cubic-bezier(.3,1.4,.5,1),visibility .35s}
-  .level-toast.show .lt-icon{animation:levelPop .6s cubic-bezier(.3,1.6,.5,1) .1s}
-
   /* Fondo del hero y del contacto en movimiento */
   .hero-bg{animation:drift 18s ease-in-out infinite alternate}
   .contact-bg{animation:drift 14s ease-in-out infinite alternate}
@@ -643,5 +597,3 @@ html.levels .level:not(.unlocked) .lv-check{opacity:0;scale:0}
 @keyframes float{50%{translate:0 -10px}}
 @keyframes chipIn{from{opacity:0;scale:.6}}
 @keyframes dotPop{50%{scale:1.3}}
-@keyframes shine{to{transform:translateX(120%)}}
-@keyframes levelPop{40%{scale:1.15}}

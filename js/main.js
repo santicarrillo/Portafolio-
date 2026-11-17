@@ -195,46 +195,6 @@
     window.addEventListener('scroll',function(){if(!raf){target=cur=window.scrollY;}},{passive:true});
   })();
 
-  /* ---------- Niveles tipo videojuego: candados, mapa y aviso ---------- */
-  (function(){
-    var badges=Array.prototype.slice.call(document.querySelectorAll('.level'));
-    if(!badges.length)return;
-    var hud={};
-    document.querySelectorAll('.hud a').forEach(function(a){hud[a.getAttribute('data-hud')]=a;});
-    var fill=document.getElementById('hud-fill'),toast=document.getElementById('level-toast'),ttxt=document.getElementById('level-toast-txt');
-    var maxLv=0,timer;
-    function sectionOf(b){var s=b.closest('section');return s?s.id:'';}
-    function unlockUpTo(n,announce){
-      if(n<=maxLv)return;
-      badges.forEach(function(b){
-        if(+b.getAttribute('data-level')<=n&&!b.classList.contains('unlocked')){
-          b.classList.add('unlocked');
-          var a=hud[sectionOf(b)];if(a)a.classList.add('unlocked');
-        }
-      });
-      maxLv=n;
-      if(fill)fill.style.setProperty('--hud',((n-1)/(badges.length-1)).toFixed(3));
-      if(announce&&toast&&ttxt){
-        var b=badges.filter(function(x){return +x.getAttribute('data-level')===n;})[0];
-        ttxt.textContent='Nivel 0'+n+' · '+b.getAttribute('data-name');
-        toast.classList.remove('show');void toast.offsetWidth;toast.classList.add('show');
-        clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('show');},2600);
-      }
-    }
-    if(!('IntersectionObserver' in window)){unlockUpTo(badges.length,false);return;}
-    root.classList.add('levels'); // recién ahora los candados se muestran cerrados
-    var io=new IntersectionObserver(function(entries){entries.forEach(function(e){
-      if(e.isIntersecting){io.unobserve(e.target);unlockUpTo(+e.target.getAttribute('data-level'),true);}
-    });},{rootMargin:'0px 0px -25% 0px'});
-    badges.forEach(function(b){io.observe(b);});
-    // Nivel actual en el mapa
-    var cur=new IntersectionObserver(function(entries){entries.forEach(function(e){
-      if(!e.isIntersecting)return;
-      Object.keys(hud).forEach(function(k){hud[k].classList.toggle('current',k===e.target.id);});
-    });},{rootMargin:'-40% 0px -55% 0px'});
-    document.querySelectorAll('main section[id]').forEach(function(s){cur.observe(s);});
-  })();
-
   /* ---------- Rutas GET /... que se "decodifican" al aparecer ---------- */
   (function(){
     if(reduce||!('IntersectionObserver' in window))return;

@@ -34,8 +34,6 @@ assets/cv/          CV en español e inglés (PDF)
 
 ## Características
 
-- **Niveles tipo videojuego**: cada sección es un nivel (Nivel 01 Servicios … Nivel 06 Contacto) con un candado que se abre al llegar, un aviso de "Nivel desbloqueado" y, en pantallas grandes, un mapa de niveles al costado que muestra el progreso y el nivel actual.
-
 - **Modo claro y oscuro automático** según la preferencia del sistema (`prefers-color-scheme`).
 - **Responsive**: diseñado desde 320px de ancho, sin scroll horizontal.
 - **Animaciones**: aparición de secciones al hacer scroll, títulos que aparecen con barrido y se desvanecen al salir, proyectos que entran desde los costados, parallax en fondos, foto y chips, scroll suave con inercia en compu, rutas `GET /...` que se "decodifican", barra de progreso de lectura, entrada escalonada del hero, luz que sigue al cursor, botones con efecto imán, tarjetas que se inclinan con el cursor y borde de luz en contacto. Se usan animaciones de CSS por scroll (`animation-timeline`) cuando el navegador las soporta, con `IntersectionObserver` como respaldo.
