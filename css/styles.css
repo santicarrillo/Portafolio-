@@ -193,7 +193,6 @@ h2{font-size:clamp(1.85rem,4vw,2.7rem);font-weight:700;letter-spacing:-.025em}
 @supports (-webkit-text-stroke:1px #000){.s-num{color:transparent;-webkit-text-stroke:1.5px var(--line)}}
 .s-title{display:grid;gap:4px}
 .service h3{font-size:clamp(1.5rem,2.4vw,1.85rem);font-weight:800;letter-spacing:-.02em}
-.s-es{font-family:var(--mono);font-size:.78rem;color:var(--accent)}
 .service > p{color:var(--muted)}
 .checks{list-style:none;margin:0;padding:0;display:grid;gap:9px;align-content:start;font-size:.95rem}
 .checks li{position:relative;padding-left:26px}
